@@ -3,7 +3,11 @@
 % !Mode:: "TeX:UTF-8"
 
 \documentclass{resume}
-\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{multirow}
+%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
@@ -11,80 +15,60 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{\textbf{吴\ 天\ 雄}}
 
-\basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+\Large{
+	\begin{tabu}{ c l r }
+		\multirow{5}{1in}{\includegraphics[width=0.88in]{wtx.jpg}} & \scshape{Tianxiong Wu} & \pbar{Java}{0.75} \\
+		& \email{wutianxiong626@gmail.com} & \pbar{Scala}{0.5} \\
+		& \phone{(+86) 132-8109-5873} & \pbar{Linux}{0.7} \\
+		& \linkedin[Tianxiong Wu]{http://www.linkedin.com/in/tianxiong-wu-5156ba103/} & \pbar{Hadoop}{0.5} \\
+		& \github[github.com/wtx626]{https://github.com/wtx626} & \pbar{Spark}{0.5}
+	\end{tabu}
+}
  
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+\section{\faGraduationCap\  \textbf{教育背景}}
+\datedsubsection{\textbf{中南财经政法大学}, 武汉}{2012 -- 2016}
+\textit{工学学士}\ 计算机科学与技术
+\datedsubsection{\textbf{四川大学}, 成都}{2016 -- 至今}
+\textit{在读硕士研究生}\ 计算机技术 
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
+\section{\faHeartO\ \textbf{所获证书}}
 \begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
+\item 四六级证书
+\item 软件设计师证书（中级）
+\item 软件著作权
+\item 优秀硕士研究生证书
 \end{itemize}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
-\begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
-\begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
-\end{itemize}
-\end{onehalfspacing}
+\section{\faUsers\ \textbf{本科项目经历}}
+\datedsubsection{\textbf{中南财经政法大学教务部官方安卓版APP的设计与开发} }{2014.2 -- 2014.6}
+APP名称：掌上中南大，于2014年6月上线，用户量达7000。主要功能包括查看课表、成绩查询、空教室查询及一键评教。
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
-\begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
-\end{itemize}
-\end{onehalfspacing}
+\datedsubsection{\textbf{2015年度全国大学生创新训练项目并获国家级重点立项}}{2015.5 -- 2015.12}
+项目为《可定制化的心理服务系统》，项目创意来源于当前大学生面对心理问题不敢于去心理咨询室寻求帮助。主要功能包括心理测试、心理美文、在线预约及匿名聊天。
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\datedsubsection{\textbf{新加坡国立大学暑期实习}}{2015.7 -- 2015.8}
+在NUS计算机学院选修了《计算机思维与技术》、《移动应用程序开发》。通过这两门课程的学习，我深入了解了《算法导论》的相关知识，以及安卓的游戏开发等内容。
 
-\section{\faCogs\ IT 技能}
+\section{\faUsers\ \textbf{硕士研究经历}}
+\datedsubsection{\textbf{研究方向}}{}
+主要从事基于深度学习的RGB-D人脸识别领域的相关研究，特别关注RGB和Depth之间的异质人脸比对以及如何提升Depth图像的精度。
+\datedsubsection{\textbf{公开发表论文（EI检索）}}{}
+Liu, Han, et al. "Matching Depth to RGB for Boosting Face Verification." Chinese Conference on Biometric Recognition. Springer, Cham, 2017.
+
+%\section{\faCogs\ \textbf{IT 技能}}
 % increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
-\end{itemize}
-
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
-
+%\begin{itemize}[parsep=0.5ex]
+ % \item 深度学习框架: Caffe, Tensorflow
+ % \item 平台: Linux
+ % \item 开发:  Web，Android
+%\end{itemize}
 \section{\faInfo\ 其他}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+	\item 技术博客: http://wutianxiong.top
+	\item GitHub: https://github.com/wtx626
+	\item 语言: 英语 - 熟练
 \end{itemize}
-
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
